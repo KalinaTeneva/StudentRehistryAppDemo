@@ -11,7 +11,7 @@
     stages{
         stage('Chekout'){
             steps{
-                Chekout scm
+                git brach: 'main', url: 'https://github.com/KalinaTeneva/StudentRehistryAppDemo'
             }
 
         }
@@ -19,7 +19,7 @@
             steps{
                 script{
                     if(isUnix()){
-                        sh 'npm install'
+                        bat 'npm install'
                     }else{
                         sh 'npm install'
                     }
