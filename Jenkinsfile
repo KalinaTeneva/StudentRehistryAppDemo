@@ -1,12 +1,5 @@
  pipeline{
     agent any
-    environment{
-        NODE_VERSION = '20.x'
-    }
-
-    tools{
-        nodejs"${NODE_VERSION}"
-    }
 
     stages{
         stage('Chekout'){
@@ -18,11 +11,7 @@
         stage('Install dependies'){
             steps{
                 script{
-                    if(isUnix()){
-                        bat 'npm install'
-                    }else{
-                        sh 'npm install'
-                    }
+                    bat 'npm install'
                 }
             }
 
