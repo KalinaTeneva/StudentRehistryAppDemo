@@ -3,8 +3,11 @@
 
     stages{
         stages('Chekout'){
-           
+            steps{
+                Chekout scm
+            }           
         }
+
         stage('Install dependies'){
             steps{
                 script{
@@ -12,6 +15,7 @@
                 }
             }
         }
+
         stage('Start application and run tests'){
             steps{
                 script{
@@ -19,6 +23,7 @@
                 }
             }
         }
+        
         stage("run tests"){
             steps{
                 script{
