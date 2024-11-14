@@ -2,7 +2,7 @@
     agent any
 
     stages{
-        stage('Chekout'){
+        stages('Chekout'){
            
         }
         stage('Install dependies'){
