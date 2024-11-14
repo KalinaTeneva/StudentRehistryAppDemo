@@ -2,7 +2,7 @@
     agent any
 
     stages{
-        stages('Chekout'){
+        stages('Checkout'){
             steps{
                 checkout scm
             }           
