@@ -4,7 +4,7 @@
     stages{
         stages('Chekout'){
             steps{
-                Chekout scm
+                checkout scm
             }           
         }
 
@@ -23,7 +23,7 @@
                 }
             }
         }
-        
+
         stage("run tests"){
             steps{
                 script{
